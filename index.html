@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Pixi.js basic example</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+        }
+    </style>
+</head>
+<body>
+    <script src="pixi.min.js"></script>
+    <script>
+        // Autodetect and create the renderer
+        var renderer = PIXI.autoDetectRenderer(160, 144);
+
+        // Set the background color of the renderer to a baby-blue'ish color
+        renderer.backgroundColor = 0x3498db;
+
+        // Append the renderer to the body of the page
+        document.body.appendChild(renderer.view);
+
+        // Create the main stage for your display objects
+        var stage = new PIXI.Container();
+
+        // Create a texture of our goose.png file
+        var texture = PIXI.Texture.fromImage('goose.png');
+
+        // Create a sprite of our goose texture 
+        var goose = new PIXI.Sprite(texture);
+
+        // Set the anchor in the center of our sprite 
+        goose.anchor.x = 0.5;
+        goose.anchor.y = 0.5;
+
+
+        // Position our goose in the center of the renderer
+        goose.position.x = renderer.width / 2;
+        goose.position.y = renderer.height / 2;
+
+        // Add the goose to the stage
+        stage.addChild(goose);
+
+        // Start animating
+        animate();
+
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Rotate our goose clockwise
+            // goose.rotation += 0.1;
+
+            // Rotate our goose counter-clockwise
+            // goose.rotation -= 0.1;
+
+            // Render our container
+            renderer.render(stage);
+        }
+    </script>
+</body>
+</html>
