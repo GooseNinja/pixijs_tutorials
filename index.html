@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Pixi.js basic example</title>
@@ -11,6 +12,7 @@
         }
     </style>
 </head>
+
 <body>
     <script src="pixi.min.js"></script>
     <script>
@@ -26,16 +28,12 @@
         // Create the main stage for your display objects
         var stage = new PIXI.Container();
 
-        // Create a texture of our goose.png file
-        var texture = PIXI.Texture.fromImage('goose.png');
-
         // Create a sprite of our goose texture 
-        var goose = new PIXI.Sprite(texture);
+        var goose = new PIXI.Sprite.fromImage('goose.png');
 
         // Set the anchor in the center of our sprite 
         goose.anchor.x = 0.5;
         goose.anchor.y = 0.5;
-
 
         // Position our goose in the center of the renderer
         goose.position.x = renderer.width / 2;
@@ -61,4 +59,5 @@
         }
     </script>
 </body>
+
 </html>
