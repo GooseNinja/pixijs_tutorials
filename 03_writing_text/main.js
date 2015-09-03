@@ -28,27 +28,27 @@
     stage.addChild(arrowText);
 
     // Create player one Text
-    var pOneText = new PIXI.Text('Player 1: 0');
+    var playerOneText = new PIXI.Text('Player 1: 0');
 
     // Position the text
-    pOneText.x = 20;
-    pOneText.y = 15;
+    playerOneText.x = 20;
+    playerOneText.y = 15;
 
     // Add Player one Text to the stage
-    stage.addChild(pOneText);
+    stage.addChild(playerOneText);
 
     // Player Two Text
-    var pTwoText = new PIXI.Text('Player 2: 0');
+    var playerTwoText = new PIXI.Text('Player 2: 0');
 
     // Place the anchor at the top right corner of the text
-    pTwoText.anchor.x = 1;
+    playerTwoText.anchor.x = 1;
 
     // Position the player two text at the same y position as player one
     // But with the x position at, full width (660) minus 20. (640)
-    pTwoText.x = renderer.width - 20;
-    pTwoText.y = 15;
+    playerTwoText.x = renderer.width - 20;
+    playerTwoText.y = 15;
     // Add player two text to the stage
-    stage.addChild(pTwoText);
+    stage.addChild(playerTwoText);
 
     // Create the timer text
     var timerText = new PIXI.Text('00:00');
