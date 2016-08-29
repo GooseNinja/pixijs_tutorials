@@ -14,7 +14,7 @@
      */
 
     // Create a small arrow Text
-    var arrowText = new PIXI.Text('>', {font: "bold 32px Roboto", fill: '#e74c3c'});
+    var arrowText = new PIXI.Text('>', {fontWeight: "bold", fontSize: 32, fontFamily: 'Roboto', fill: '#e74c3c'});
 
     // Set the anchor point in the center of the arrow
     arrowText.anchor.x = 0.5;
@@ -69,7 +69,9 @@
 
     // Options for our "advanced" text
     var textOptions = {
-        font: "bold 64px Roboto", // Set  style, size and font
+        fontWeight: "bold", // Set font weight
+        fontSize: 64, // Set font size
+        fontFamily: 'Roboto', // Set Font Family
         fill: '#3498db', // Set fill color to blue
         align: 'center', // Center align the text, since it's multiline
         stroke: '#34495e', // Set stroke color to a dark blue gray color
